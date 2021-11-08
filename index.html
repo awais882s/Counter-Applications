@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Application</title>
+    <link rel="stylesheet" href="./counter.css" />
+  </head>
+  <body>
+    <h1 class="counter">Counter Applications</h1>
+    <h1 id="result" class="result">0</h1>
+    <div class="center">
+      <button id="plus" class="btn">+</button>
+      <button id="minus" class="btn">-</button>
+    </div>
+  </body>
+  <script>
+    // /////////////////////// documents by elements/////////////////////////////
+
+    let plus = document.getElementById("plus");
+    let minus = document.getElementById("minus");
+    let result = document.getElementById("result");
+
+    // //////////////////////////////// perform events on buttons///////////////////////////////
+    let counter = 0;
+    plus.addEventListener("click", function () {
+      result.innerText = counter++;
+    });
+    ///////// two methoods to perform counter value/////////
+    // counter = counter + 1;
+    // result.innerText = counter;
+     minus.addEventListener("click",function(){
+       result.innerText = counter --;
+     })
+  </script>
+</html>
